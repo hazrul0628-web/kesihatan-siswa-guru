@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Laman interaktif tentang strategi penjagaan kesihatan mental dan fizikal siswa guru.">
+<title>Sejahtera Siswa Guru | Kesihatan Mental & Fizikal</title>
+<style>
+:root{--navy:#102a43;--blue:#176b87;--teal:#20b7aa;--mint:#dff7f2;--cream:#fffaf0;--coral:#ff876e;--text:#243746;--muted:#627789;--white:#fff;--shadow:0 14px 40px #102a4315}
+*{box-sizing:border-box;scroll-behavior:smooth}
+body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;background:#f5fbfc;color:var(--text);line-height:1.65}
+a{color:inherit}
+header{position:sticky;top:0;z-index:10;background:#ffffffed;backdrop-filter:blur(12px);border-bottom:1px solid #dcebed}
+.nav{max-width:1180px;margin:auto;padding:12px 22px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:850;color:var(--navy);text-decoration:none;font-size:1.02rem}
+.logo{display:grid;place-items:center;width:42px;height:42px;border-radius:14px;background:linear-gradient(135deg,var(--teal),var(--blue));color:white;font-size:1.35rem}
+nav{display:flex;flex-wrap:wrap;gap:6px}
+nav a{text-decoration:none;font-size:.9rem;font-weight:700;color:#36546a;padding:8px 10px;border-radius:10px}
+nav a:hover{background:var(--mint);color:var(--blue)}
+.hero{background:radial-gradient(circle at 80% 20%,#a9f1e3 0,transparent 28%),linear-gradient(125deg,#102a43 0%,#176b87 55%,#20b7aa 100%);color:white;overflow:hidden}
+.hero-inner{max-width:1180px;margin:auto;padding:68px 22px 72px;display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center}
+.eyebrow{display:inline-flex;gap:8px;align-items:center;padding:7px 12px;border:1px solid #ffffff60;border-radius:100px;background:#ffffff12;font-size:.82rem;font-weight:750;letter-spacing:.04em}
+h1{font-size:clamp(2.4rem,5vw,4.6rem);line-height:1.06;letter-spacing:-.045em;margin:20px 0}
+.hero p{font-size:1.08rem;max-width:610px;color:#e3f6f7}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+.btn{display:inline-flex;justify-content:center;align-items:center;text-decoration:none;border:0;border-radius:13px;padding:12px 18px;font-weight:800;cursor:pointer;transition:.2s}
+.btn-primary{background:var(--coral);color:#172b3b;box-shadow:0 8px 20px #081b2b25}
+.btn-secondary{color:white;border:1px solid #ffffff8a;background:#ffffff12}
+.btn:hover{transform:translateY(-2px)}
+.hero-art{position:relative;min-height:350px;display:grid;place-items:center}
+.hero-art img{width:min(100%,440px);height:390px;object-fit:cover;border-radius:32px;box-shadow:0 24px 60px #061b2c55;border:5px solid #ffffff50}
+.float-card{position:absolute;background:white;color:var(--navy);padding:13px 16px;border-radius:16px;box-shadow:var(--shadow);font-weight:800}
+.float-card small{display:block;color:var(--muted);font-weight:600}
+.float-one{left:-10px;top:25px}.float-two{right:-8px;bottom:20px}
+main{max-width:1180px;margin:auto;padding:0 22px}
+.section{padding:76px 0;scroll-margin-top:85px}
+.section-head{max-width:720px;margin-bottom:28px}
+.kicker{color:#148c88;font-size:.8rem;font-weight:900;letter-spacing:.12em;text-transform:uppercase}
+h2{font-size:clamp(1.8rem,3vw,2.8rem);line-height:1.15;letter-spacing:-.03em;color:var(--navy);margin:9px 0 14px}
+.section-head p{color:var(--muted);margin:0}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:-28px;position:relative}
+.stat{background:white;border-radius:18px;padding:20px;box-shadow:var(--shadow);border:1px solid #e6f0f2}
+.stat strong{display:block;font-size:1.05rem;color:var(--navy)}.stat span{font-size:.9rem;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:white;border:1px solid #e3eef0;border-radius:22px;overflow:hidden;box-shadow:var(--shadow);transition:transform .2s}
+.card:hover{transform:translateY(-4px)}
+.card img{width:100%;height:190px;object-fit:cover;display:block}
+.card-body{padding:22px}
+.number{display:inline-grid;place-items:center;width:35px;height:35px;background:var(--mint);color:#087f7c;border-radius:11px;font-weight:900;margin-bottom:10px}
+.card h3{color:var(--navy);margin:0 0 8px;font-size:1.18rem}
+.card p{color:var(--muted);font-size:.95rem;margin:0 0 14px}
+.tag{display:inline-block;background:#f0f8fa;color:#286075;padding:5px 9px;border-radius:8px;font-size:.78rem;font-weight:800}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:26px;align-items:stretch}
+.panel{border-radius:24px;padding:28px;background:white;border:1px solid #e2edef;box-shadow:var(--shadow)}
+.panel.teal{background:linear-gradient(145deg,#e3faf5,#f9fffd)}
+.panel.blue{background:linear-gradient(145deg,#e9f4ff,#fff)}
+.panel h3{margin-top:0;color:var(--navy);font-size:1.35rem}
+.checklist{list-style:none;padding:0;margin:16px 0 0}
+.checklist li{padding:10px 0 10px 34px;position:relative;border-bottom:1px solid #dbe9eb}
+.checklist li:last-child{border-bottom:0}
+.checklist li:before{content:"✓";position:absolute;left:0;top:10px;width:23px;height:23px;display:grid;place-items:center;border-radius:50%;background:#c9f3e9;color:#087f70;font-weight:900}
+.daily{background:var(--navy);color:white;border-radius:28px;padding:34px;display:grid;grid-template-columns:.8fr 1.2fr;gap:28px;align-items:center}
+.daily h2{color:white}.daily p{color:#d7e9f1}
+.routine{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.routine-item{padding:15px;background:#ffffff12;border:1px solid #ffffff25;border-radius:15px}
+.routine-item strong{display:block;color:#8ce7d8}.routine-item span{font-size:.9rem;color:#e1eef4}
+.reflection{background:linear-gradient(130deg,#fff1e9,#fffaf1);border-radius:24px;padding:28px;border:1px solid #ffe0d2}
+.prompt{font-weight:800;color:var(--navy);font-size:1.1rem}
+textarea{width:100%;min-height:115px;padding:14px;border:1px solid #d9cfc8;border-radius:13px;font:inherit;resize:vertical;background:#fff}
+.small-note{font-size:.83rem;color:var(--muted)}
+footer{background:#0b2033;color:#d4e5ed;padding:34px 22px}
+.footer-inner{max-width:1180px;margin:auto;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+footer strong{color:white}footer p{margin:5px 0;font-size:.9rem}
+@media(max-width:850px){.hero-inner{grid-template-columns:1fr;padding-top:48px}.hero-art{min-height:300px}.hero-art img{height:320px}.grid{grid-template-columns:repeat(2,1fr)}.daily{grid-template-columns:1fr}.float-one{left:0}.float-two{right:0}}
+@media(max-width:580px){.nav{align-items:flex-start;flex-direction:column}.nav nav{gap:2px}nav a{padding:6px 7px;font-size:.82rem}.hero-inner{padding:40px 18px 56px}.hero-art img{height:280px}.stats{grid-template-columns:1fr;margin-top:16px}.grid,.duo{grid-template-columns:1fr}.section{padding:54px 0}.routine{grid-template-columns:1fr}.daily{padding:24px}.card img{height:210px}}
+</style>
+</head>
+<body>
+<header><div class="nav">
+<a class="brand" href="#utama"><span class="logo">♡</span><span>SEJAHTERA<br>SISWA GURU</span></a>
+<nav aria-label="Navigasi utama">
+<a href="#strategi">Strategi</a><a href="#mental">Kesihatan mental</a><a href="#fizikal">Kesihatan fizikal</a><a href="#rutin">Rutin harian</a><a href="#refleksi">Refleksi</a>
+</nav></div></header>
+<section class="hero" id="utama"><div class="hero-inner">
+<div><span class="eyebrow">PANDUAN INTERAKTIF • KOMUNITI KAMPUS</span>
+<h1>Jaga minda.<br>Gerakkan tubuh.<br><span style="color:#a5f3e5">Sejahtera bersama.</span></h1>
+<p>Menjadi siswa guru memerlukan tenaga, fokus dan emosi yang seimbang. Terokai strategi mudah untuk menjaga kesihatan mental dan fizikal supaya pembelajaran, latihan mengajar dan kehidupan kampus lebih sejahtera.</p>
+<div class="actions"><a class="btn btn-primary" href="#strategi">Terokai 6 strategi ↓</a><a class="btn btn-secondary" href="#rutin">Bina rutin sihat</a></div></div>
+<div class="hero-art"><img src="assets/kesihatan-mental.jpg" alt="Ilustrasi penjagaan kesihatan mental, rehat dan amalan sihat">
+<div class="float-card float-one">🧠 Minda sihat<small>Emosi • Fokus • Rehat</small></div><div class="float-card float-two">💚 Tubuh aktif<small>Gerak • Makan • Tidur</small></div></div>
+</div></section>
+<main>
+<div class="stats" aria-label="Fokus utama"><div class="stat"><strong>01 · Kenali diri</strong><span>Perhatikan emosi dan tahap tenaga.</span></div><div class="stat"><strong>02 · Amalkan sedikit demi sedikit</strong><span>Perubahan kecil yang konsisten lebih mudah dikekalkan.</span></div><div class="stat"><strong>03 · Dapatkan sokongan</strong><span>Anda tidak perlu mengurus semuanya sendirian.</span></div></div>
+<section class="section" id="strategi"><div class="section-head"><span class="kicker">Enam langkah praktikal</span><h2>Strategi penjagaan kesihatan mental dan fizikal</h2><p>Pilih amalan yang sesuai dengan jadual kuliah, tugasan dan latihan mengajar. Setiap strategi mempunyai tindakan ringkas yang boleh dicuba dalam kehidupan kampus.</p></div>
+<div class="grid">
+<article class="card"><img src="assets/amalan-sihat.jpg" alt="Perancangan, pemakanan seimbang dan amalan penjagaan diri"><div class="card-body"><span class="number">01</span><h3>Urus masa dan tugasan</h3><p>Senaraikan tugasan, pecahkan kerja besar kepada langkah kecil dan tetapkan masa rehat. Elakkan menunggu sehingga saat akhir.</p><span class="tag">Perancangan • Fokus</span></div></article>
+<article class="card"><img src="assets/kesihatan-mental.jpg" alt="Ilustrasi otak dan penjagaan kesihatan mental"><div class="card-body"><span class="number">02</span><h3>Kenali emosi dan urus stres</h3><p>Berhenti seketika, tarik nafas perlahan dan namakan emosi yang dirasai. Cuba teknik pernafasan atau aktiviti menenangkan.</p><span class="tag">Kesedaran kendiri</span></div></article>
+<article class="card"><img src="assets/aktiviti-fizikal.jpg" alt="Pelbagai aktiviti sukan dan pergerakan fizikal"><div class="card-body"><span class="number">03</span><h3>Aktifkan tubuh</h3><p>Berjalan, berbasikal, bersukan atau melakukan regangan mengikut kemampuan. Mulakan secara beransur-ansur dan pilih aktiviti yang menyeronokkan.</p><span class="tag">Aktiviti fizikal</span></div></article>
+<article class="card"><img src="assets/amalan-sihat.jpg" alt="Pilihan makanan berkhasiat untuk menyokong kesejahteraan"><div class="card-body"><span class="number">04</span><h3>Amalkan pemakanan dan hidrasi</h3><p>Utamakan makanan yang pelbagai dan seimbang, makan secara teratur serta minum air dengan mencukupi sepanjang hari.</p><span class="tag">Nutrisi • Air</span></div></article>
+<article class="card"><img src="assets/senaman.jpg" alt="Individu melakukan aktiviti fizikal di ruang terbuka"><div class="card-body"><span class="number">05</span><h3>Utamakan tidur dan rehat</h3><p>Wujudkan waktu tidur yang konsisten, kurangkan skrin sebelum tidur dan selang-selikan sesi belajar dengan rehat pendek.</p><span class="tag">Tidur berkualiti</span></div></article>
+<article class="card"><img src="assets/sokongan-mental.jpg" alt="Ilustrasi sokongan dan perbualan berkaitan kesihatan mental"><div class="card-body"><span class="number">06</span><h3>Bina jaringan sokongan</h3><p>Berkongsi dengan rakan dipercayai, pensyarah penasihat atau kaunselor kampus apabila berdepan tekanan. Mendapatkan bantuan ialah tindakan yang wajar.</p><span class="tag">Sokongan sosial</span></div></article>
+</div></section>
+<section class="section" id="mental"><div class="section-head"><span class="kicker">Kesejahteraan emosi</span><h2>Menjaga kesihatan mental</h2><p>Kesihatan mental merangkumi keupayaan mengurus tekanan, belajar, berhubung dengan orang lain dan mendapatkan bantuan apabila diperlukan.</p></div>
+<div class="duo"><div class="panel teal"><h3>🌿 Amalan yang boleh dicuba</h3><ul class="checklist"><li>Ambil jeda singkat antara kuliah atau tugasan.</li><li>Gunakan jurnal ringkas untuk mencatat emosi dan perkara yang disyukuri.</li><li>Tetapkan batas yang realistik terhadap komitmen dan masa skrin.</li><li>Berbual dengan seseorang yang dipercayai apabila terasa terbeban.</li></ul></div>
+<div class="panel"><h3>🤝 Bila perlu mendapatkan bantuan?</h3><p>Dapatkan sokongan jika tekanan atau perubahan emosi berpanjangan, mengganggu tidur, pembelajaran atau kehidupan harian. Anda boleh menghubungi unit kaunseling institusi atau profesional kesihatan.</p><p><strong>Ingat:</strong> meminta bantuan bukan tanda kelemahan. Jika keadaan terasa mendesak atau keselamatan diri terancam, hubungi perkhidmatan kecemasan atau orang dewasa yang boleh membantu dengan segera.</p></div></div>
+</section>
+<section class="section" id="fizikal"><div class="section-head"><span class="kicker">Kesejahteraan tubuh</span><h2>Menjaga kesihatan fizikal</h2><p>Penjagaan fizikal yang konsisten membantu menyokong tenaga, tumpuan dan keupayaan menjalani rutin harian.</p></div>
+<div class="duo"><div class="panel"><h3>🏃 Bergerak mengikut kemampuan</h3><ul class="checklist"><li>Pilih aktiviti yang sesuai dengan tahap kecergasan.</li><li>Gunakan tangga atau berjalan kaki untuk perjalanan dekat jika sesuai.</li><li>Lakukan regangan selepas duduk dalam tempoh yang lama.</li><li>Berhenti dan dapatkan nasihat jika mengalami kesakitan atau gejala luar biasa.</li></ul></div>
+<div class="panel blue"><h3>🥗 Jaga keperluan asas</h3><ul class="checklist"><li>Makan pelbagai jenis makanan dan jangan kerap melangkau waktu makan.</li><li>Bawa botol air dan minum sepanjang hari.</li><li>Kekalkan jadual tidur yang tetap sedaya mungkin.</li><li>Jaga kebersihan diri dan persekitaran tempat tinggal serta belajar.</li></ul></div></div>
+</section>
+<section class="section" id="rutin"><div class="daily"><div><span class="kicker" style="color:#8ce7d8">Rutin yang realistik</span><h2>Contoh rutin harian siswa guru</h2><p>Jadikan contoh ini panduan fleksibel. Ubah suai mengikut jadual kelas, kesihatan dan komitmen masing-masing.</p><a class="btn btn-primary" href="#refleksi">Rancang amalan saya ↓</a></div>
+<div class="routine"><div class="routine-item"><strong>🌅 Pagi</strong><span>Minum air, sarapan dan semak keutamaan hari ini.</span></div><div class="routine-item"><strong>📚 Antara kelas</strong><span>Bangun, regangkan badan dan rehatkan mata.</span></div><div class="routine-item"><strong>🌤️ Petang</strong><span>Berjalan atau lakukan aktiviti fizikal yang digemari.</span></div><div class="routine-item"><strong>🌙 Malam</strong><span>Sediakan tugasan esok, kurangkan skrin dan bersedia untuk tidur.</span></div></div></div></section>
+<section class="section" id="refleksi"><div class="section-head"><span class="kicker">Aktiviti refleksi interaktif</span><h2>Pelan kesejahteraan saya</h2><p>Gunakan ruang ini untuk merancang satu perubahan kecil. Catatan ini kekal pada peranti semasa halaman dibuka dan tidak dihantar ke mana-mana.</p></div>
+<div class="reflection"><label class="prompt" for="plan">Apakah satu amalan yang ingin saya mulakan minggu ini?</label><textarea id="plan" placeholder="Contoh: Saya akan berjalan selama 15 minit selepas kelas pada tiga hari minggu ini..."></textarea><div class="actions"><button class="btn btn-primary" id="savePlan">Simpan catatan pada peranti</button><button class="btn" style="background:#fff;color:#36546a;border:1px solid #e5d6ce" id="clearPlan">Padam catatan</button></div><p class="small-note" id="status" aria-live="polite">Catatan disimpan dalam pelayar peranti ini sahaja.</p></div></section>
+<section class="section" id="rujukan"><div class="section-head"><span class="kicker">Asas panduan</span><h2>Rujukan dan panduan umum</h2><p>Kandungan ini berasaskan prinsip kesihatan awam dan kesejahteraan. Ia merupakan panduan pendidikan, bukan diagnosis atau pengganti nasihat profesional.</p></div>
+<div class="panel"><ul class="checklist">
+<li><strong>World Health Organization (WHO).</strong> Maklumat kesihatan mental dan kesejahteraan. <a href="https://www.who.int/health-topics/mental-health" target="_blank" rel="noopener">Baca di laman WHO ↗</a></li>
+<li><strong>World Health Organization (WHO).</strong> Aktiviti fizikal. <a href="https://www.who.int/news-room/fact-sheets/detail/physical-activity" target="_blank" rel="noopener">Baca fakta aktiviti fizikal ↗</a></li>
+<li><strong>World Health Organization (WHO).</strong> Pemakanan sihat. <a href="https://www.who.int/news-room/fact-sheets/detail/healthy-diet" target="_blank" rel="noopener">Baca fakta pemakanan sihat ↗</a></li>
+<li><strong>World Health Organization (WHO).</strong> Air, sanitasi dan kebersihan (WASH). <a href="https://www.who.int/health-topics/water-sanitation-and-hygiene-wash" target="_blank" rel="noopener">Baca tentang WASH ↗</a></li>
+</ul></div></section>
+</main>
+<footer><div class="footer-inner"><div><strong>SEJAHTERA SISWA GURU</strong><p>Strategi Penjagaan Kesihatan Mental &amp; Fizikal</p></div><div><p>Produk bahan digital multimedia interaktif</p><p>Untuk komuniti kampus • Kandungan pendidikan</p></div></div></footer>
+<script>
+const plan=document.getElementById('plan'),statusText=document.getElementById('status');
+try{plan.value=localStorage.getItem('pelanSejahteraSiswaGuru')||''}catch(e){}
+document.getElementById('savePlan').addEventListener('click',()=>{try{localStorage.setItem('pelanSejahteraSiswaGuru',plan.value);statusText.textContent='Catatan anda telah disimpan pada pelayar peranti ini.'}catch(e){statusText.textContent='Pelayar ini tidak membenarkan simpanan. Sila salin catatan anda.'}});
+document.getElementById('clearPlan').addEventListener('click',()=>{plan.value='';try{localStorage.removeItem('pelanSejahteraSiswaGuru')}catch(e){}statusText.textContent='Catatan telah dipadam daripada pelayar ini.'});
+</script>
+</body></html>
